@@ -9,5 +9,8 @@
 #ifndef tester33_Bridging_Header_h
 #define tester33_Bridging_Header_h
 
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+
 
 #endif /* tester33_Bridging_Header_h */
