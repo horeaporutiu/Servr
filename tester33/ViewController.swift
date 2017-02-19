@@ -18,6 +18,13 @@ class ViewController: UITableViewController,FBSDKLoginButtonDelegate {
     var ref:FIRDatabaseReference?
     
     func handleLogout() {
+        
+        do {
+            try FIRAuth.auth()?.signOut()
+            
+        }   catch let logoutError {
+            print(logoutError)
+        }
         let loginController = LoginController()
         present(loginController, animated: true, completion: nil)
     }
@@ -34,6 +41,12 @@ class ViewController: UITableViewController,FBSDKLoginButtonDelegate {
 
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
+        
+        if FIRAuth.auth()?.currentUser?.uid == nil {
+            
+       
+            handleLogout()
+        }
 
     
         
