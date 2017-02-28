@@ -19,6 +19,7 @@
 		805746631E4D9211005AF3F1 /* tester33UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805746621E4D9211005AF3F1 /* tester33UITests.swift */; };
 		805746711E4D9225005AF3F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 805746701E4D9225005AF3F1 /* GoogleService-Info.plist */; };
 		807638501E558F3A001EE393 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8076384F1E558F3A001EE393 /* LoginController.swift */; };
+		8090D5C01E6577A6002D4AF1 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 8090D5BF1E6577A6002D4AF1 /* splash.png */; };
 		D8667F3ABE189EDD86446B38 /* Pods_tester33UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53A72388E13BAFB60DDDB65 /* Pods_tester33UITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		805746701E4D9225005AF3F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		80709C451E4DA11F00DC5C7C /* tester33.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = tester33.entitlements; sourceTree = "<group>"; };
 		8076384F1E558F3A001EE393 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		8090D5BF1E6577A6002D4AF1 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		80A33D6A8579AB9D8CE4CFC4 /* Pods-tester33.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tester33.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tester33/Pods-tester33.debug.xcconfig"; sourceTree = "<group>"; };
 		8BE8E15D69B353BEC53E3AE9 /* Pods-tester33Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tester33Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tester33Tests/Pods-tester33Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B53A72388E13BAFB60DDDB65 /* Pods_tester33UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tester33UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +150,7 @@
 				8076384E1E558EFF001EE393 /* Controller */,
 				80709C451E4DA11F00DC5C7C /* tester33.entitlements */,
 				805746701E4D9225005AF3F1 /* GoogleService-Info.plist */,
+				8090D5BF1E6577A6002D4AF1 /* splash.png */,
 				8057463F1E4D9210005AF3F1 /* AppDelegate.swift */,
 				805746431E4D9210005AF3F1 /* Main.storyboard */,
 				805746491E4D9210005AF3F1 /* Assets.xcassets */,
@@ -310,6 +313,7 @@
 				8057464D1E4D9210005AF3F1 /* LaunchScreen.storyboard in Resources */,
 				8057464A1E4D9210005AF3F1 /* Assets.xcassets in Resources */,
 				805746711E4D9225005AF3F1 /* GoogleService-Info.plist in Resources */,
+				8090D5C01E6577A6002D4AF1 /* splash.png in Resources */,
 				805746451E4D9210005AF3F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
