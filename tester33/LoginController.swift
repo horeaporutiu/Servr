@@ -167,7 +167,7 @@ class LoginController: UIViewController, FBSDKLoginButtonDelegate {
         customFBBut.translatesAutoresizingMaskIntoConstraints = false
         customFBBut.addTarget(self, action: #selector(handleCustomFBLogin), for: .touchUpInside)
         return customFBBut
-    }()
+    }()//
     
     /*let profileImageView: UIImageView = {
      let imageView = UIImageView()
