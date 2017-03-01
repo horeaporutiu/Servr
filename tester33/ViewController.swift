@@ -99,7 +99,7 @@ class ViewController: UITableViewController,FBSDKLoginButtonDelegate {
             if err != nil {
                 print("failed to start graph request:" , err ?? "")
                 return
-            }
+            }//
             
             
             
