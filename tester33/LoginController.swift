@@ -159,7 +159,7 @@ class LoginController: UIViewController, FBSDKLoginButtonDelegate {
     
     let customFBButton: UIButton = {
         let customFBBut = UIButton(type: .system)
-        customFBBut.backgroundColor = UIColor(r: 160, g:15, b:16)
+        customFBBut.backgroundColor = UIColor(r: 61, g:91, b:151)
         //customFBButton.frame = CGRect(x: 16, y: 520, width: loginRegisterButton.width, height: 50)
         customFBBut.setTitle("Login with Facebook", for: .normal)
         customFBBut.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
@@ -239,7 +239,14 @@ class LoginController: UIViewController, FBSDKLoginButtonDelegate {
     
     func handleCustomFBLogin() {
         
-        print("facebook!!")
+        FBSDKLoginManager().logIn(withReadPermissions: ["email", "public_profile"], from: self) { (result, err) in
+            if err != nil {
+                print("Custom FB Login failed:", err ?? "")
+                return
+            }
+            
+            print(result?.token.tokenString ?? "")
+        }
     }
     
     
