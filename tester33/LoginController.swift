@@ -221,7 +221,7 @@ class LoginController: UIViewController, FBSDKLoginButtonDelegate {
         super.viewDidLoad()
         
         //change background Color
-        view.backgroundColor = UIColor(r: 255, g: 255, b: 141)
+        view.backgroundColor = UIColor(r: 255, g: 255, b: 255)
         
         view.addSubview(customFBButton)
         
