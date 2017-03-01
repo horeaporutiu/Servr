@@ -15,7 +15,7 @@ class LoginController: UIViewController {
     
     let inputsContainerView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor(r: 255, g:255, b:255)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 5
         view.layer.masksToBounds = true
@@ -24,7 +24,7 @@ class LoginController: UIViewController {
     
     let loginRegisterButton: UIButton = {
         let button = UIButton (type: .system)
-        button.backgroundColor = UIColor(r: 80, g:101, b:161)
+        button.backgroundColor = UIColor(r: 160, g:15, b:16)
         button.setTitle("Register", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(UIColor.white, for: .normal)
@@ -135,13 +135,13 @@ class LoginController: UIViewController {
         return tf
     }()
     
-    let profileImageView: UIImageView = {
+    /*let profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "servrLogo")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         return imageView
-    }()
+    }()*/
     
     lazy var loginRegisterSegmentedControl: UISegmentedControl = {
         let sc = UISegmentedControl(items: ["Login", "Register"])
@@ -184,17 +184,16 @@ class LoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-   
         //change background Color
-        view.backgroundColor = UIColor(r: 255, g: 255, b: 255)
+        view.backgroundColor = UIColor(r: 191, g: 254, b: 141)
 
         view.addSubview(inputsContainerView)
         view.addSubview(loginRegisterButton)
-        view.addSubview(profileImageView)
+        //view.addSubview(profileImageView)
         view.addSubview(loginRegisterSegmentedControl)
         setupInputsContainerView()
         setupLoginRegisterButton()
-        setupProfileImageView()
+        //setupProfileImageView()
         setupLoginRegisterSegmentedControl()
         
         
@@ -205,9 +204,9 @@ class LoginController: UIViewController {
     func setupLoginRegisterSegmentedControl() {
         //need x, y, width, height constraints
         
-        loginRegisterSegmentedControl.subviews[0].tintColor = UIColor(r:80, g:101, b:161)
+        loginRegisterSegmentedControl.subviews[0].tintColor = UIColor(r:160, g:15, b:16)
         
-        loginRegisterSegmentedControl.subviews[1].tintColor = UIColor(r:80, g:101, b:161)
+        loginRegisterSegmentedControl.subviews[1].tintColor = UIColor(r:160, g:15, b:16)
 
         
         //button.backgroundColor = UIColor(r: 80, g:101, b:161)
@@ -219,14 +218,14 @@ class LoginController: UIViewController {
         loginRegisterSegmentedControl.heightAnchor.constraint(equalToConstant: 36).isActive = true
     }
     
-    func setupProfileImageView(){
+    /*func setupProfileImageView(){
         let img = profileImageView
         img.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         img.bottomAnchor.constraint(equalTo: loginRegisterSegmentedControl.topAnchor, constant: -12).isActive = true
         img.widthAnchor.constraint(equalToConstant: 150).isActive = true
         img.heightAnchor.constraint(equalToConstant: 150).isActive = true
     
-    }
+    }*/
     
     func setupLoginRegisterButton() {
         

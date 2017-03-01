@@ -25,26 +25,26 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright (c) Horea Porutiu 2017. All rights Reserved. " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEz-SX-J6Q">
                                 <rect key="frame" x="-18" y="626" width="411" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="E54-OQ-tZs"/>
+                                    <constraint firstAttribute="height" constant="21" id="ptc-Wt-dLv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash.png" translatesAutoresizingMaskIntoConstraints="NO" id="TRm-vn-BEz">
-                                <rect key="frame" x="32" y="99" width="311" height="469"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ServerIconSplash.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="93G-y7-dSI">
+                                <rect key="frame" x="8" y="173" width="358" height="321"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TRm-vn-BEz" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="15c-cf-S93"/>
-                            <constraint firstItem="cEz-SX-J6Q" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="JRI-YJ-yYR"/>
-                            <constraint firstItem="TRm-vn-BEz" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="16" id="Mqf-vm-Ae2"/>
-                            <constraint firstItem="cEz-SX-J6Q" firstAttribute="top" secondItem="TRm-vn-BEz" secondAttribute="bottom" constant="58" id="Ojc-Pn-ylG"/>
-                            <constraint firstAttribute="bottom" secondItem="cEz-SX-J6Q" secondAttribute="bottom" constant="20" symbolic="YES" id="f2O-az-eAe"/>
-                            <constraint firstItem="TRm-vn-BEz" firstAttribute="centerX" secondItem="cEz-SX-J6Q" secondAttribute="centerX" id="ivK-Vp-ntd"/>
-                            <constraint firstItem="cEz-SX-J6Q" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-34" id="uzl-L4-ckk"/>
+                            <constraint firstItem="cEz-SX-J6Q" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ajq-yE-26M"/>
+                            <constraint firstAttribute="bottom" secondItem="cEz-SX-J6Q" secondAttribute="bottom" constant="20" symbolic="YES" id="EMc-KF-3DJ"/>
+                            <constraint firstItem="cEz-SX-J6Q" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-34" id="m8E-tN-dLV"/>
+                            <constraint firstItem="93G-y7-dSI" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="153" id="mPl-RK-3zO"/>
+                            <constraint firstItem="cEz-SX-J6Q" firstAttribute="centerX" secondItem="93G-y7-dSI" secondAttribute="centerX" id="pN4-Z4-Oqx"/>
+                            <constraint firstItem="93G-y7-dSI" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="qNc-pD-G9l"/>
+                            <constraint firstItem="93G-y7-dSI" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-8" id="xoO-9g-NdY"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -54,6 +54,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="splash.png" width="2133" height="1600"/>
+        <image name="ServerIconSplash.jpg" width="1024" height="768"/>
     </resources>
 </document>
