@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "tester33/LoginController.swift"
-            timestampString = "509323381.53099"
+            timestampString = "510023214.216054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "inputsContainerView"
             landmarkType = "24">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "tester33/LoginController.swift"
-            timestampString = "509323381.53099"
+            timestampString = "510023214.216054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "inputsContainerView"
             landmarkType = "24">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "tester33/LoginController.swift"
-            timestampString = "509323381.53099"
+            timestampString = "510023214.216054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "inputsContainerView"
             landmarkType = "24">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "tester33/LoginController.swift"
-            timestampString = "509323381.53099"
+            timestampString = "510023214.216054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "loginRegisterButton"
             landmarkType = "24">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "tester33/LoginController.swift"
-            timestampString = "509323381.53099"
+            timestampString = "510023214.216054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "handleRegister()"
             landmarkType = "7">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "tester33/LoginController.swift"
-            timestampString = "509323381.53099"
+            timestampString = "510023214.216054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "handleRegister()"
             landmarkType = "7">
          </BreakpointContent>
@@ -160,6 +160,38 @@
             startingLineNumber = "48"
             endingLineNumber = "48"
             landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tester33/LoginController.swift"
+            timestampString = "510035856.446658"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
+            landmarkName = "handleLoginRegisterChange()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tester33/LoginController.swift"
+            timestampString = "510035856.446658"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
+            landmarkName = "handleLoginRegisterChange()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -11,7 +11,15 @@ import Firebase
 import FBSDKLoginKit
 //import FacebookLogin
 
-class LoginController: UIViewController {
+class LoginController: UIViewController, FBSDKLoginButtonDelegate {
+    /**
+     Sent to the delegate when the button was used to logout.
+     - Parameter loginButton: The button that was clicked.
+     */
+    public func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        print(1234)
+    }
+
     
     let inputsContainerView: UIView = {
         let view = UIView()
@@ -33,6 +41,22 @@ class LoginController: UIViewController {
         button.addTarget(self, action: #selector(handleLoginRegister), for: .touchUpInside)
         return button
     }()
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        if error != nil {
+            print(error)
+            return
+        }
+        
+        FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email"]).start { (connection, result, err) in
+            
+            if err != nil {
+                print("Failed to start graph request:", err)
+                return
+            }
+            print(result)
+        }
+    }
     
     func handleLoginRegister() {
         if loginRegisterSegmentedControl.selectedSegmentIndex == 0 {
@@ -135,6 +159,18 @@ class LoginController: UIViewController {
         return tf
     }()
     
+    let customFBButton: UIButton = {
+        let customFBBut = UIButton(type: .system)
+        customFBBut.backgroundColor = UIColor(r: 160, g:15, b:16)
+        //customFBButton.frame = CGRect(x: 16, y: 520, width: loginRegisterButton.width, height: 50)
+        customFBBut.setTitle("Login with Facebook", for: .normal)
+        customFBBut.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        customFBBut.setTitleColor(.white, for: .normal)
+        customFBBut.translatesAutoresizingMaskIntoConstraints = false
+        customFBBut.addTarget(self, action: #selector(handleCustomFBLogin), for: .touchUpInside)
+        return customFBBut
+    }()
+    
     /*let profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "servrLogo")
@@ -160,10 +196,13 @@ class LoginController: UIViewController {
         
         inputsContainerViewHeightAnchor?.constant = loginRegisterSegmentedControl.selectedSegmentIndex == 0 ? 100 : 170
         
+        //customFBButton.frame = loginRegisterSegmentedControl.selectedSegmentIndex == 0 ? CGRect(x: 16, y: 540, width: view.frame.width - 32, height: 50) : customFBButton.frame = CGRect(x: 16, y: 500, width: view.frame.width - 32, height: 50)
+
+        
         nameTextFieldHeightAnchor?.isActive = false
         nameTextField.placeholder = loginRegisterSegmentedControl.selectedSegmentIndex == 0 ? "" : "Name"
         nameTextFieldHeightAnchor = nameTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: loginRegisterSegmentedControl.selectedSegmentIndex == 0 ? 0: 1/3)
-        
+    
         nameTextFieldHeightAnchor?.isActive = true
         
         emailTextFieldHeightAnchor?.isActive = false
@@ -186,6 +225,8 @@ class LoginController: UIViewController {
         
         //change background Color
         view.backgroundColor = UIColor(r: 191, g: 254, b: 141)
+        
+        view.addSubview(customFBButton)
 
         view.addSubview(inputsContainerView)
         view.addSubview(loginRegisterButton)
@@ -193,12 +234,16 @@ class LoginController: UIViewController {
         view.addSubview(loginRegisterSegmentedControl)
         setupInputsContainerView()
         setupLoginRegisterButton()
-        //setupProfileImageView()
         setupLoginRegisterSegmentedControl()
+        setupFBButton()
         
         
     }
     
+    func handleCustomFBLogin() {
+
+        print("facebook!!")
+    }
     
     
     func setupLoginRegisterSegmentedControl() {
@@ -208,24 +253,22 @@ class LoginController: UIViewController {
         
         loginRegisterSegmentedControl.subviews[1].tintColor = UIColor(r:160, g:15, b:16)
 
-        
-        //button.backgroundColor = UIColor(r: 80, g:101, b:161)
-
-
         loginRegisterSegmentedControl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         loginRegisterSegmentedControl.bottomAnchor.constraint(equalTo: inputsContainerView.topAnchor, constant: -12).isActive = true
         loginRegisterSegmentedControl.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor, multiplier: 1).isActive = true
         loginRegisterSegmentedControl.heightAnchor.constraint(equalToConstant: 36).isActive = true
     }
     
-    /*func setupProfileImageView(){
-        let img = profileImageView
-        img.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        img.bottomAnchor.constraint(equalTo: loginRegisterSegmentedControl.topAnchor, constant: -12).isActive = true
-        img.widthAnchor.constraint(equalToConstant: 150).isActive = true
-        img.heightAnchor.constraint(equalToConstant: 150).isActive = true
+
+    func setupFBButton() {
+
+        customFBButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        customFBButton.topAnchor.constraint(equalTo: loginRegisterButton.bottomAnchor, constant: 12).isActive = true
+        customFBButton.widthAnchor.constraint(equalTo: loginRegisterButton.widthAnchor).isActive = true
+        customFBButton.heightAnchor.constraint(equalTo: loginRegisterButton.heightAnchor).isActive = true
+    }
     
-    }*/
+
     
     func setupLoginRegisterButton() {
         
@@ -242,6 +285,8 @@ class LoginController: UIViewController {
         
 
     }
+    
+   
     
     var inputsContainerViewHeightAnchor: NSLayoutConstraint?
     
