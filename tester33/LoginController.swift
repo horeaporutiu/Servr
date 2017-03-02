@@ -49,10 +49,10 @@ class LoginController: UIViewController, FBSDKLoginButtonDelegate {
         FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email"]).start { (connection, result, err) in
             
             if err != nil {
-                print("Failed to start graph request:", err)
+                print("Failed to start graph request:", err ?? "")
                 return
             }
-            print(result)
+            print(123)
         }
     }
     
@@ -169,13 +169,13 @@ class LoginController: UIViewController, FBSDKLoginButtonDelegate {
         return customFBBut
     }()//
     
-    /*let profileImageView: UIImageView = {
+    let profileImageView: UIImageView = {
      let imageView = UIImageView()
-     imageView.image = UIImage(named: "servrLogo")
+     imageView.image = UIImage(named: "ServerIconSplash")
      imageView.translatesAutoresizingMaskIntoConstraints = false
      imageView.contentMode = .scaleAspectFit
      return imageView
-     }()*/
+     }()
     
     lazy var loginRegisterSegmentedControl: UISegmentedControl = {
         let sc = UISegmentedControl(items: ["Login", "Register"])
@@ -227,10 +227,11 @@ class LoginController: UIViewController, FBSDKLoginButtonDelegate {
         
         view.addSubview(inputsContainerView)
         view.addSubview(loginRegisterButton)
-        //view.addSubview(profileImageView)
+        view.addSubview(profileImageView)
         view.addSubview(loginRegisterSegmentedControl)
         setupInputsContainerView()
         setupLoginRegisterButton()
+        setupProfileImageView()
         setupLoginRegisterSegmentedControl()
         setupFBButton()
         
@@ -246,6 +247,11 @@ class LoginController: UIViewController, FBSDKLoginButtonDelegate {
             }
             
             print(result?.token.tokenString ?? "")
+            
+            let homeViewController :HomeViewController = HomeViewController()
+            self.present(homeViewController, animated: true, completion: nil)
+            
+            print("3424312312321312312312312312312312312")
         }
     }
     
@@ -354,6 +360,15 @@ class LoginController: UIViewController, FBSDKLoginButtonDelegate {
         
         
     }
+    
+    func setupProfileImageView() {
+        //need x, y, width, height constraints
+        profileImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        profileImageView.bottomAnchor.constraint(equalTo: loginRegisterSegmentedControl.topAnchor, constant: -12).isActive = true
+        profileImageView.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        profileImageView.heightAnchor.constraint(equalToConstant: 150).isActive = true
+    }
+
     
     
 }
